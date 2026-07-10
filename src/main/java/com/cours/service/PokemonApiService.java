@@ -22,11 +22,11 @@ public class PokemonApiService {
     private final ObjectMapper mapper = new ObjectMapper();
 
     // Notre methode recuperer un Pokemon depuis l'API
-    public Pokemon recuperer(int id) throws Exception {
+    public Pokemon recuperer(String recherche) throws Exception {
 
         // Construction d'une requête HTTP GET.
         HttpRequest req = HttpRequest
-                .newBuilder(URI.create(URL + id))
+                .newBuilder(URI.create(URL + recherche))
                 .GET()
                 .build();
 
