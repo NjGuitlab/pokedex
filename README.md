@@ -128,4 +128,4 @@ mvn javafx:run
 
 ## Auteur
 
-Projet réalisé par AMMOUR Nadjib dans le cadre du cours de Développement d'applications Java.
+Projet réalisé par AMMOUR Nadjib dans le cadre du cours d'ALGORITHMES ET MODÈLES DE PROGRAMMATION .
