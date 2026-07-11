@@ -126,13 +126,6 @@ public class Pokemon {
     // --------------------- Methode toString ----------------------------------- //
     @Override
     public String toString() {
-        return "Pokemon{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                ", imageUrl='" + imageUrl + '\'' +
-                ", taille=" + taille +
-                ", poids=" + poids +
-                ", types=" + types +
-                '}';
+        return nom;
     }
 }

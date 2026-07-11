@@ -10,6 +10,8 @@ import java.sql.ResultSet;
 
 public class PokemonDAO {
 
+    // ----------------------- Methode sauvegarder --------------------------------- //
+
     public void sauvegarder(Pokemon pokemon) throws SQLException{
 
         String sql = """
@@ -40,6 +42,8 @@ public class PokemonDAO {
         }
 
     }
+
+    // -------------------- Methode recuperer ------------------------------------- //
 
     public List<Pokemon> recupererTous() throws SQLException{
 
@@ -77,6 +81,24 @@ public class PokemonDAO {
         }
 
         return  pokemons;
+    }
+
+    // -------------------- Methode supprimer ------------------------------ //
+
+    public void supprimer(int id) throws SQLException {
+        String sql = """
+            DELETE FROM pokemon
+            WHERE id = ?
+            """;
+
+        try (Connection co = Connexion.getConnexion();
+             PreparedStatement ps = co.prepareStatement(sql)) {
+
+            ps.setInt(1, id);
+            ps.executeUpdate();
+
+        }
+
     }
 
 }
